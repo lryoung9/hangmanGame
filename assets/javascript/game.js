@@ -16,10 +16,10 @@ var words = [
 var movie = words[Math.floor(Math.random()*words.length)];
 console.log(movie);
 // Randomly select word from the movie's movieRef
-var hint = movie.movieRef[Math.floor(Math.random()*movie.movieRef.length)];
+var word = movie.movieRef[Math.floor(Math.random()*movie.movieRef.length)];
 console.log(hint);
     var reference = document.querySelector("hint");
     // Give hint as to what Movie the word is related to (words properties)
-    reference.innerHTML = "Hint: " + ;
+    reference.innerHTML = "Hint: " + movie;
 };
 

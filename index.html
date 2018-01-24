@@ -22,10 +22,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-8">
-				<h3 class="griffy">Type a letter on the keyboard to make your guess:</h3>
+				<!-- Promt user to play and keep track of letters already guessed-->
+				<h3 id="userGuesses" class="griffy">Type a letter on the keyboard to make your guess:</h3>
+				<!-- Current word to guess -->
+				<h3 id="word" class="griffy">Word</h3>
+				<!-- Hint the movie that the word is referencing -->
+				<button type="button" id="hint" class="griffy btn btn-warning btn-block">Hint</button>
+				<!-- Number of guesses remaining -->
+				<h3 id="guessesLeft" class="griffy">Guesses left:</h3>
+				<!-- Wins -->
+				<h3 id="wins" class="griffy">Wins:</h3>
 			</div>
 			<!-- hangman animation -->
-			<div class="col-xs-12 col-md-4"></div>
+			<div id="hanging" class="col-xs-12 col-md-4"></div>
 		</div>
 	</div>
 </body>
