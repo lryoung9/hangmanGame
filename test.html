@@ -1,0 +1,36 @@
+<!-- CSS Typography -->
+
+<!-- STUDENTS: Change the font family in our document's p-tags to Lucida Sans Pro. Follow the directions for each tag. -->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stuff I Think About</title>
+
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+  var words = [
+    {movieName: "Edward Scissorhands", movieRef: ["snow", "scissor", "haircut", "topiary", "waterbed", "inventor", "Avon"]},
+    {movieName: "Beetlejuice", movieRef: ["ghost", "Lydia", "Adam", "Barbara", "Deetz", "Betelgeuse", "seance"]},
+    {movieName: "The Nightmare Before Christmas", movieRef: ["Halloweentown", "Christmastown", "Jack Skellington", "Sally", "Oogie Boogie", "nightshade", "Zero"]},
+    {movieName: "James and the Giant Peach", movieRef: ["orphan", "grasshopper", "centipede", "ladybuy", "glowworm", "spider", "peach"]},
+    {movieName: "Sweeny Todd", movieRef: ["barber", "London", "straight razor", "serial killer", "victorian", "meat pie"]},
+  ];
+
+// Randomly select movie
+var movie = words[Math.floor(Math.random()*words.length)];
+console.log(movie);
+// Randomly select word from the movie's movieRef
+var hint = movie.movieRef[Math.floor(Math.random()*movie.movieRef.length)];
+console.log(hint);
+
+</script>
+
+</body>
+
+</html>
