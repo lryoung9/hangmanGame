@@ -47,11 +47,27 @@ function resetGame() {
 
 // If hint button is clicked, give hint as to what Movie the word is related to (words properties)
 document.addEventListener("click", function(){
-    document.getElementById("hint").innerHTML = movie.movieName;
+    document.getElementById("hint").innerHTML = "The word has to do with the movie " + movie.movieName + ".";
 });
 
+// Take user's letter input
 document.onkeyup = function(event) {
-
+	// make sure lowercase
+    var userChoice = event.key.toLowerCase();
+    console.log("The user guessed :" + userChoice);
+    // alert user if they press something besides a letter
+    if (letters.indexOf(userChoice) === -1) {
+    	alert("Seems you've chosen a number or symbol, and not a letter. Please choose a letter.")
+    	return;
+    }
+    // alert user if they have already made the same guess previously
+    if (userGuesses.indexOf(userChoice) > -1) {
+    	alert("You have already guessed that letter. Please choose a different letter.");
+    	return;
+    };
+    // Add guess to the array of guesses so far
+    userGuesses.push(userChoice)
+    console.log("Your guesses so far: " + userGuesses)
 }
 
 
